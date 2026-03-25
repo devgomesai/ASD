@@ -1,0 +1,25 @@
+{
+  "model_type": "XGBClassifier",
+  "feature_columns": [
+    "advanced_maternal",
+    "advanced_paternal",
+    "gdm",
+    "infection",
+    "preterm",
+    "low_bw",
+    "family_history"
+  ],
+  "best_threshold": 0.5,
+  "metrics": {
+    "roc_auc": 0.6389,
+    "pr_auc": 0.072,
+    "best_f1": 0.0971
+  },
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  }
+}
