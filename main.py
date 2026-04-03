@@ -134,9 +134,11 @@ class HealthResponse(BaseModel):
 # Helper
 # ------------------------------------------------------------------
 def _classify_risk(prob: float) -> str:
-    if prob < 0.05:
+    percent = prob * 100
+
+    if percent <= 40:
         return "LOW"
-    if prob < 0.15:
+    if percent <= 65:
         return "MODERATE"
     return "HIGH"
 
